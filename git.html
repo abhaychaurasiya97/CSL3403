@@ -23,17 +23,20 @@
         }
         .content {
             width: 100%;
+            justify-items: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 0;
+            /* margin-top: 0;
             margin-bottom: 0;
             max-width: 62.5em;
             *zoom: 1;
             position: relative;
             padding-left: .9375em;
-            padding-right: .9375em;
+            padding-right: .9375em; */
         }
         fieldset{
+            width: 90%;
+            max-width: 95%;
         	padding-bottom: 1.25em;
         }
         fieldset > legend{
@@ -52,7 +55,7 @@
             font-size: 1.15rem;
             color: rgba(0,0,0,.85);
             font-weight: 300;
-            text-rendering: optimizeLegibility;
+            /* text-rendering: optimizeLegibility; */
         }
         .desc{
             font-size: larger;
@@ -88,8 +91,10 @@
                 git-push - Update remote refs along with associated objects
             </div>
             <pre class="command">
-                <em>git push</em> [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=&lt;git-receive-pack&gt;]
-                    [--repo=&lt;repository&gt;] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+                <em>git push</em> [--all | --mirror | --tags] [--follow-tags] [--atomic] 
+                    [-n | --dry-run] [--receive-pack=&lt;git-receive-pack&gt;]
+                    [--repo=&lt;repository&gt;] [-f | --force] [-d | --delete] 
+                    [--prune] [-v | --verbose]
                     [-u | --set-upstream] [-o &lt;string&gt; | --push-option=&lt;string&gt;]
                     [--[no-]signed|--signed=(true|false|if-asked)]
                     [--force-with-lease[=&lt;refname&gt;[:&lt;expect&gt;]]]
@@ -110,8 +115,8 @@
                 git-commit - Record changes to the repository
             </div>
             <pre class="command">
-                <em>git commit</em> [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
-                    [--dry-run] [(-c | -C | --fixup | --squash) &lt;commit&gt;]
+                <em>git commit</em> [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;]
+                    [--amend] [--dry-run] [(-c | -C | --fixup | --squash) &lt;commit&gt;]
                     [-F &lt;file&gt; | -m &lt;msg&gt;] [--reset-author] [--allow-empty]
                     [--allow-empty-message] [--no-verify] [-e] [--author=&lt;author&gt;]
                     [--date=&lt;date&gt;] [--cleanup=&lt;mode&gt;] [--[no-]status]
