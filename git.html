@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git</title>
+
+    <style>
+        body{
+            background: linear-gradient(to bottom, white, rgb(99, 216, 255));
+        }
+        .header{
+            color: rgba(0,0,0,.85);
+            margin-top: 2.25rem;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 62.5em;
+            padding-left: .9375em;
+            padding-right: .9375em;
+            text-align: center;
+            font-size: x-large;
+        }
+        .content {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 62.5em;
+            *zoom: 1;
+            position: relative;
+            padding-left: .9375em;
+            padding-right: .9375em;
+        }
+        fieldset{
+        	padding-bottom: 1.25em;
+        }
+        fieldset > legend{
+            font-size: xx-large;
+            font-family: "Open Sans","DejaVu Sans",sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            color: #ba3925;
+            text-rendering: optimizeLegibility;
+            margin-top: 1em;
+            margin-bottom: .5em;
+            line-height: 1.0125em;
+        }
+        .command{
+            font-family: "Open Sans","DejaVu Sans",sans;
+            font-size: 1.15rem;
+            color: rgba(0,0,0,.85);
+            font-weight: 300;
+            text-rendering: optimizeLegibility;
+        }
+        .desc{
+            font-size: larger;
+            color: rgba(0,0,0,.75);
+        }
+        .name{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span style="color: red;">G</span>it <span style="color: green;">C</span>ommands</h1>
+    </div>
+    <div class="content">
+        <fieldset>
+            <legend>pull</legend>
+            <div class="name">
+                git-pull - Fetch from and integrate with another repository or a local branch
+            </div>
+            <pre class="command">
+                <em>git pull</em> [&lt;options&gt;] [&lt;repository&gt;] [&lt;refspec&gt;…​]]
+            </pre>
+            <div class="desc">
+                Incorporates changes from a remote repository into the current branch. In its default mode, git pull is shorthand for git fetch followed by git merge FETCH_HEAD.
+
+                More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch. With --rebase, it runs git rebase instead of git merge.
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>push</legend>
+            <div class="name">
+                git-push - Update remote refs along with associated objects
+            </div>
+            <pre class="command">
+                <em>git push</em> [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=&lt;git-receive-pack&gt;]
+                    [--repo=&lt;repository&gt;] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+                    [-u | --set-upstream] [-o &lt;string&gt; | --push-option=&lt;string&gt;]
+                    [--[no-]signed|--signed=(true|false|if-asked)]
+                    [--force-with-lease[=&lt;refname&gt;[:&lt;expect&gt;]]]
+                    [--no-verify] [&lt;repository&gt; [&lt;refspec&gt;…​]]
+            </pre>
+            <div class="desc">
+                Updates remote refs using local refs, while sending objects necessary to complete the given refs.
+
+                You can make interesting things happen to a repository every time you push into it, by setting up hooks there. See documentation for git-receive-pack(1).
+
+                When the command line does not specify where to push with the &lt;repository&gt; argument, branch.*.remote configuration for the current branch is consulted to determine where to push. If the configuration is missing, it defaults to origin.
+
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>commit</legend>
+            <div class="name">
+                git-commit - Record changes to the repository
+            </div>
+            <pre class="command">
+                <em>git commit</em> [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
+                    [--dry-run] [(-c | -C | --fixup | --squash) &lt;commit&gt;]
+                    [-F &lt;file&gt; | -m &lt;msg&gt;] [--reset-author] [--allow-empty]
+                    [--allow-empty-message] [--no-verify] [-e] [--author=&lt;author&gt;]
+                    [--date=&lt;date&gt;] [--cleanup=&lt;mode&gt;] [--[no-]status]
+                    [-i | -o] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
+                    [-S[&lt;keyid&gt;]] [--] [&lt;pathspec&gt;…​]
+            </pre>
+            <div class="desc">
+                Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is "detached" as described in git-checkout).
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>
