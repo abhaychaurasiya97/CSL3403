@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Form</title>
+
+    <style>
+        body{
+           background: linear-gradient(to bottom, white, limegreen); 
+        }
+        h1{
+        }
+        hr{
+            width: 70vw;
+        }
+        .head{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+        }
+        .box{   background: linear-gradient(to right, white, #acc6e4, rgb(241, 241, 241));  }
+        .autoWidth{ width: auto; }
+        .field{ 
+            margin: 2vh;
+            margin-right: 4vh;
+        }
+        .suggest{
+            color: grey;
+            font-size: small;
+        }
+        fieldset{   margin: 2vh;    }
+        label{
+            width: 12em;
+            display:inline-block;
+        }
+        legend{
+            background: linen;
+            font-weight: bold;
+        }
+        input[disabled]{
+                border-radius: 4px;
+        }
+        input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number]{
+            -moz-appearance: textfield;
+        }
+        input[type=radio]{
+            margin-right: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">REGISTRATION</h1>
+    <hr>
+    <fieldset class="box">
+        <legend>BASIC DETAILS</legend>
+        <img src="user.svg" alt="" style="float: right; margin: 8px;" width="140px">
+       <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+
+       <div class="field">
+            <label for="formNum">Form Number</label>
+            <input type="text" name="formNum" id="">
+        </div>
+        <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="formNum" id="">
+        </div>
+        <div class="field">
+            <label for="rollNum">Roll Number</label>
+            <input type="text" name="rollmNum" id="">
+        </div>
+        <div class="field">
+            <label for="gender">Gender</label>
+            <span>
+                <label for="male_gender" class="autoWidth">Male</label>
+                <input type="radio" name="gender_r" id="male_gender">
+                <label for="female_gender" class="autoWidth">Female</label>
+                <input type="radio" name="gender_r" id="female_gender">
+            </span>
+        </div>
+        <div class="field">
+            <label for="dob">DOB</label>
+            <input type="date" name="" id="dob">
+        </div>
+        <div class="field">
+            <label for="pwd">PWD</label>
+            <span>
+                <label for="yes_pwd" class="autoWidth">Yes</label>
+                <input type="radio" name="pwd_r" id="yes_pwd">
+                <label for="no_pwd" class="autoWidth">No</label>
+                <input type="radio" name="pwd_r" id="no_pwd">
+            </span>
+        </div>
+        <div class="field">
+            <label for="category">Category</label>
+            <select name="" id="category">
+                <option value="gen">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="address">Address</label>
+            <br>
+            <textarea name="" id="address" cols="60" rows="5"></textarea>
+        </div>
+        <div class="field">
+            <label for="pin_code">PIN Code</label>
+            <input type="number" name="" id="pin_code" min="100001" max="999999" style="width: 6em;">
+        </div>
+        <div class="field">
+            <label for="cand_num">Phone of Student</label>
+            <span>
+                <input type="text" name="" id="" value="+91" style="width: 2em;" disabled>
+                <input type="number" name="" id="cand_num" max="9999999999">
+            </span>
+        </div>
+        <div class="field">
+            <label for="gaurd_num">Phone of Gaurdian</label>
+            <span>
+                <input type="text" name="" id="" value="+91" style="width: 2em;" disabled>
+                <input type="number" name="" id="gaurd_num" max="9999999999">
+            </span>
+        </div>
+    </fieldset>
+    <fieldset class="box">
+        <legend>ACADEMIC INFORMATION</legend>
+        <div class="field">
+            <label for="course">Course</label>
+            <select name="" id="course">
+                <option value="btech">B.Tech</option>
+                <option value="barch">B.Arch</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="branch">Branch</label>
+            <input type="text" name="" id="branch">
+        </div>
+        <div class="field">
+            <label for="sem">Semester</label>
+            <select name="" id="sem">
+                <option value="1_sem">1st</option>
+                <option value="3_sem">3rd</option>
+                <option value="5_sem">5th</option>
+                <option value="7_sem">7th</option>
+            </select>
+            <span class="suggest"> (for which allotment will be done)</span>
+        </div>
+        <div class="field">
+            <label for="air">All India Rank</label>
+            <input type="number" name="" id="air" style="width: 6em;">
+            <span class="suggest">(2020 JEE Main/GATE)</span>
+        </div>
+        <div class="field">
+            <label for="cir">Category Rank</label>
+            <input type="number" name="" id="cir" style="width: 6em;">
+            <span class="suggest">(2020 JEE Main/GATE)</span>
+        </div>
+        <div class="field">
+            <label for="cgpa">CGPA</label>
+            <input type="number" name="" id="cgpa">
+        </div>
+        <div class="field">
+            <label for="backlog">Backlog</label>
+            <span>
+                <label for="y_backlog" class="autoWidth">Yes</label>
+                <input type="radio" name="backlog" id="y_backlog">
+                <label for="n_backlog" class="autoWidth">No</label>
+                <input type="radio" name="backlog" id="n_backlog">
+            </span>
+        </div>
+        <div class="field">
+            <label for="hostel">Hostel Accomodation</label>
+            <span>
+                <label for="y_hostel" class="autoWidth">Yes</label>
+                <input type="radio" name="hostel" id="y_hostel">
+                <label for="n_hostel" class="autoWidth">No</label>
+                <input type="radio" name="hostel" id="n_hostel">
+                <span class="suggest">(if any)</span>
+            </span>
+        </div>
+        <div class="field" id="name_hostel">
+            <label for="hostel_name">Name of Hostel</label>
+            <input type="text" name="" id="hostel_name">
+        </div>
+        <div class="field" id="room_hostel">
+            <label for="hostel_room">Room Number</label>
+            <input type="text" name="" id="hostel_room">
+        </div>
+    </fieldset>
+    <fieldset class="box">
+        <legend>ACCOUNT DETAILS FOR REFUNDING PROCESS</legend>
+        <div class="field">
+            <label for="acc_holder">Account Holder Name</label>
+            <input type="text" name="" id="acc_holder">
+            <span class="suggest"> (As per bank passbook) </span>
+        </div>
+        <div class="field">
+            <label for="acc_num">Account Number</label>
+            <input type="number" name="" id="acc_num">
+        </div>
+        <div class="field">
+            <label for="ifsc">IFSC Code</label>
+            <input type="number" name="" id="ifsc">
+        </div>
+        <div class="field">
+            <label for="bank_name">Bank Name</label>
+            <input type="text" name="" id="bank_name">
+        </div>
+        <div class="field">
+            <label for="bank_branch">Bank Branch</label>
+            <input type="text" name="" id="bank_branch">
+        </div>
+    </fieldset>
+</body>
+</html>
